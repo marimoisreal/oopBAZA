@@ -1,0 +1,9 @@
+class Geom:
+  pass 
+
+class Line(Geom):
+  pass
+
+g = Geom()
+print(g)
+#все ведет к объекту
