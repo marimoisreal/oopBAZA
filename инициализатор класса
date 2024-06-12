@@ -1,0 +1,23 @@
+class Point:
+  color = 'red'
+  circlke = 2
+#__init__ для инициализации класса что бы что бы нужно было создать объект 
+#к примеру x, y
+  def __init__(self, x, y):
+    print("вызов init")
+    self.x = x
+    self.y = y
+#__del__ для удаления объекта, он вызывается, когда все ссылки на объект были удалены
+#к примеру если будет pt = 0
+  def __del__(self):
+    print("Удаление экземпляра: " + str(self))
+  
+  def set_coords(self, x, y):
+    self.x = x
+    self.y = y
+
+  def get_coords(self):
+    return (self.x, self.y)
+
+pt = Point(10, 20)
+print(pt.get_coords())
