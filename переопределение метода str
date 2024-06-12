@@ -1,0 +1,7 @@
+class Vector(list):
+  def __str__(self):
+    return " ".join(map(str, self))
+
+v = Vector([1, 2 ,3])
+print(v)
+#выведет 1 2 3 вместо [1, 2, 3], потому что мы переопределили метод __str__
