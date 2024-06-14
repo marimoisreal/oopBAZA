@@ -1,0 +1,48 @@
+class Kubs:
+  def __init__(self, side, color):
+    self.side = side
+    self.color = color
+  
+  def volume(self):
+    return self.side ** 3
+   
+kubs = Kubs(2, 'red')  # Create an instance of the Kubs class with side=2 and color='red'
+print(f" kubs: side = {kubs.side}, color = {kubs.color}, volume = {kubs.volume()}")
+
+kubg = Kubs(10, "green")  # Create a new cube object
+print(f"kubg: side = {kubg.side}, color = {kubg.color} volume = {kubg.volume()}")
+
+kubr = Kubs(1, "blue")
+print(f"kubr: side = {kubr.side}, color = {kubr.color} volume = {kubr.volume()}")
+
+del kubr 
+print("kubr больше не существует")
+print(f"kubg side: {kubg.side}")
+
+def __del__(self):
+    print("Удаление экземпляра " + self.color)
+    del self.color
+  
+def __getitem__(self):  
+  if self.side < kubs.side or self.side > kubs.side:
+    print("сторона должна быть 2!")
+  
+  else:
+    print("сторона должна быть 2!")
+
+class bloks(Kubs):
+  def __init__(self, amount, name, form, value):
+    self.__amount = amount
+    self.name = name
+    self.form = form
+    self.value = value
+    if self.form not in [11, 12, 13, 14, 22]:
+      self.value = 1
+
+    else:
+      self.validity = 0
+      print("Form value is valid!")
+    if self.__amount < 1 or self.__amount > 4:
+      print("Cube count is invalid!")
+    else:
+      print("Cube count is valid!")
